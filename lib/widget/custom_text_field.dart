@@ -11,14 +11,14 @@ class CustomTextField extends StatefulWidget {
   final bool obscureText; // Novo parâmetro
   final VoidCallback? onIconTap; // Função de callback para o ícone
 
-  CustomTextField({
+  const CustomTextField({
     super.key,
     required this.hintTxt,
     required this.image,
     required this.controller,
     this.keyBordType,
-    this.obscureText = false, // Padrão para false
-    this.onIconTap, // Novo parâmetro
+    this.obscureText = false,
+    this.onIconTap,
   });
 
   @override
@@ -32,7 +32,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
       height: 70.0,
       padding: const EdgeInsets.symmetric(horizontal: 30.0),
       margin: const EdgeInsets.symmetric(
-        horizontal: 20.0,
+        horizontal: 15.0,
         vertical: 10.0,
       ),
       decoration: BoxDecoration(

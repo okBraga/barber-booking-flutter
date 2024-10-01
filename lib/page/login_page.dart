@@ -1,5 +1,4 @@
 import 'package:firebase_login/core/colors.dart';
-import 'package:firebase_login/core/space.dart';
 import 'package:firebase_login/core/text_style.dart';
 import 'package:firebase_login/widget/custom_text_field.dart';
 import 'package:firebase_login/widget/main_button.dart';
@@ -26,27 +25,27 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: blackBG,
+      backgroundColor: Colors.black87,
       body: Padding(
         padding: const EdgeInsets.only(top: 50.0),
         child: SingleChildScrollView(
           child: Column(
             children: [
-              const SpaceVH(height: 50.0),
+              const SizedBox(height: 50.0),
               const Text(
                 'Welcome Back!',
                 style: headline1,
               ),
-              const SpaceVH(height: 10.0),
+              const SizedBox(height: 10.0),
               const Text(
                 'Please sign in to your account',
                 style: headline3,
               ),
-              const SpaceVH(height: 60.0),
+              const SizedBox(height: 60.0),
               CustomTextField(
                 controller: _emailController,
                 image: 'user.svg',
-                hintTxt: 'Username',
+                hintTxt: 'Email',
                 obscureText: false,
               ),
               CustomTextField(
@@ -56,11 +55,11 @@ class _LoginPageState extends State<LoginPage> {
                 obscureText: obscureText,
                 onIconTap: togglePasswordVisibility,
               ),
-              const SpaceVH(height: 10.0),
+              const SizedBox(height: 10.0),
               Align(
                 alignment: Alignment.centerRight,
                 child: Padding(
-                  padding: const EdgeInsets.only(right: 20.0),
+                  padding: const EdgeInsets.only(right: 15.0),
                   child: TextButton(
                     onPressed: () {},
                     child: const Text(
@@ -70,7 +69,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
               ),
-              const SpaceVH(height: 100.0),
+              const SizedBox(height: 100.0),
               Align(
                 alignment: Alignment.bottomCenter,
                 child: Column(
@@ -80,7 +79,7 @@ class _LoginPageState extends State<LoginPage> {
                       text: 'Sign in',
                       buttonColor: blueButton,
                     ),
-                    const SpaceVH(height: 20.0),
+                    const SizedBox(height: 20.0),
                     MainButton(
                       onTap: () {},
                       text: 'Sign in with google',
@@ -88,7 +87,7 @@ class _LoginPageState extends State<LoginPage> {
                       buttonColor: white,
                       textColor: blackBG,
                     ),
-                    const SpaceVH(height: 20.0),
+                    const SizedBox(height: 20.0),
                     TextButton(
                       onPressed: () {
                         //Navigator.push(context, MaterialPageRoute(builder: (builder) => SignUpPage()));

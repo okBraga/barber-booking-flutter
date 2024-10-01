@@ -1,4 +1,5 @@
 import 'package:firebase_login/page/login_page.dart';
+import 'package:firebase_login/page/sign_up_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
