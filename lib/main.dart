@@ -1,3 +1,4 @@
+import 'package:firebase_login/constants/routes.dart';
 import 'package:firebase_login/page/login_page.dart';
 import 'package:firebase_login/page/sign_up_page.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +19,11 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const LoginPage(),
+      initialRoute: Routes.loginPage,
+      routes: {
+        Routes.loginPage: (_) => const LoginPage(),
+        Routes.sigUpPage: (_) => const SignUpPage(),
+      },
     );
   }
 }

@@ -4,21 +4,23 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class CustomTextField extends StatefulWidget {
-  final String hintTxt;
+  final String hintText;
   final String image;
   final TextEditingController controller;
   final TextInputType? keyBordType;
-  final bool obscureText; // Novo parâmetro
-  final VoidCallback? onIconTap; // Função de callback para o ícone
+  final bool obscureText;
+  final VoidCallback? onIconTap;
+  final String? Function(String?)? validator;
 
   const CustomTextField({
     super.key,
-    required this.hintTxt,
+    required this.hintText,
     required this.image,
     required this.controller,
     this.keyBordType,
     this.obscureText = false,
     this.onIconTap,
+    required this.validator,
   });
 
   @override
@@ -44,21 +46,22 @@ class _CustomTextFieldState extends State<CustomTextField> {
         children: [
           SizedBox(
             width: 270.0,
-            child: TextField(
+            child: TextFormField(
               controller: widget.controller,
               textAlignVertical: TextAlignVertical.center,
-              obscureText: widget.obscureText, // Usar o parâmetro obscureText
+              obscureText: widget.obscureText,
               keyboardType: widget.keyBordType,
               decoration: InputDecoration(
                 border: InputBorder.none,
-                hintText: widget.hintTxt,
+                hintText: widget.hintText,
                 hintStyle: hintStyle,
               ),
               style: headline2,
+              validator: widget.validator,
             ),
           ),
           GestureDetector(
-            onTap: widget.onIconTap, // Chama a função de callback ao tocar
+            onTap: widget.onIconTap,
             child: SvgPicture.asset(
               'assets/icon/${widget.image}',
               height: 20.0,
