@@ -1,13 +1,15 @@
+import 'package:firebase_login/constants/routes.dart';
+import 'package:firebase_login/widget/professional_card.dart';
 import 'package:flutter/material.dart';
 
 class ProfessionalSelectionPage extends StatefulWidget {
   const ProfessionalSelectionPage({super.key});
 
   @override
-  _ProfessionalSelectionPageState createState() => _ProfessionalSelectionPageState();
+  ProfessionalSelectionPageState createState() => ProfessionalSelectionPageState();
 }
 
-class _ProfessionalSelectionPageState extends State<ProfessionalSelectionPage> {
+class ProfessionalSelectionPageState extends State<ProfessionalSelectionPage> {
   final List<String> professionals = [
     "Profissional A",
     "Profissional B",
@@ -57,7 +59,9 @@ class _ProfessionalSelectionPageState extends State<ProfessionalSelectionPage> {
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(8.0),
         child: ElevatedButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.of(context).pushNamed(Routes.dateSelectionPage);
+          },
           style: ElevatedButton.styleFrom(
             padding: const EdgeInsets.all(12),
             backgroundColor: Colors.black,
@@ -103,30 +107,6 @@ class _ProfessionalSelectionPageState extends State<ProfessionalSelectionPage> {
           ),
           tileColor: selectedProfessional == null ? Colors.grey.shade200 : Colors.transparent,
         ),
-      ),
-    );
-  }
-}
-
-class ProfessionalCard extends StatelessWidget {
-  final String professional;
-  final bool isSelected;
-
-  ProfessionalCard({super.key, required this.professional, required this.isSelected});
-
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      margin: const EdgeInsets.symmetric(vertical: 10),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-      child: ListTile(
-        contentPadding: const EdgeInsets.all(16),
-        title: Text(professional),
-        leading: const CircleAvatar(
-          radius: 25,
-          backgroundImage: NetworkImage("https://via.placeholder.com/150"),
-        ),
-        tileColor: isSelected ? Colors.grey.shade200 : Colors.transparent,
       ),
     );
   }

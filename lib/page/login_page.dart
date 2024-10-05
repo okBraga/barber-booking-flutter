@@ -27,6 +27,7 @@ class _LoginPageState extends State<LoginPage> {
 
   void _submitForm() {
     if (_formKey.currentState!.validate()) {
+      Navigator.of(context).pushNamed(Routes.serviceSelectionPage);
     } else {}
   }
 
@@ -107,7 +108,9 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                         const SizedBox(height: 20.0),
                         MainButton(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.of(context).pushNamed(Routes.serviceSelectionPage);
+                          },
                           text: 'Sign in with google',
                           image: 'google-logo.png',
                           buttonColor: white,

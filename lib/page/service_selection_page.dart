@@ -1,4 +1,5 @@
 import 'package:firebase_login/constants/routes.dart';
+import 'package:firebase_login/widget/service_card.dart';
 import 'package:flutter/material.dart';
 
 class ServiceSelectionPage extends StatelessWidget {
@@ -27,8 +28,8 @@ class ServiceSelectionPage extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: ListView(
-          children: [
-            const Text(
+          children: const [
+            Text(
               "Cortes",
               style: TextStyle(
                 fontSize: 18,
@@ -39,8 +40,8 @@ class ServiceSelectionPage extends StatelessWidget {
             ServiceCard(title: "Corte na Tesoura", price: "R\$ 40,00"),
             ServiceCard(title: "Corte Máquina", price: "R\$ 30,00"),
             ServiceCard(title: "Corte Disfarçado", price: "R\$ 45,00"),
-            const SizedBox(height: 20),
-            const Text(
+            SizedBox(height: 20),
+            Text(
               "Barba",
               style: TextStyle(
                 fontSize: 18,
@@ -50,8 +51,8 @@ class ServiceSelectionPage extends StatelessWidget {
             ),
             ServiceCard(title: "Barba Simples", price: "R\$ 15,00"),
             ServiceCard(title: "Barba Completa", price: "R\$ 30,00"),
-            const SizedBox(height: 20),
-            const Text(
+            SizedBox(height: 20),
+            Text(
               "Tratamentos",
               style: TextStyle(
                 fontSize: 18,
@@ -62,8 +63,8 @@ class ServiceSelectionPage extends StatelessWidget {
             ServiceCard(title: "Máscara Black", price: "R\$ 45,00"),
             ServiceCard(title: "Selagem", price: "R\$ 80,00"),
             ServiceCard(title: "Platinado", price: "R\$ 300,00"),
-            const SizedBox(height: 20),
-            const Text(
+            SizedBox(height: 20),
+            Text(
               "Sobrancelha",
               style: TextStyle(
                 fontSize: 18,
@@ -73,8 +74,8 @@ class ServiceSelectionPage extends StatelessWidget {
             ),
             ServiceCard(title: "Sobrancelha", price: "R\$ 20,00"),
             ServiceCard(title: "Apenas risquinho", price: "R\$ 10,00"),
-            const SizedBox(height: 20),
-            const Text(
+            SizedBox(height: 20),
+            Text(
               "Combos",
               style: TextStyle(
                 fontSize: 18,
@@ -85,7 +86,7 @@ class ServiceSelectionPage extends StatelessWidget {
             ServiceCard(title: "Corte Disfarçado + Barba", price: "R\$ 30,00"),
             ServiceCard(title: "Corte Disfarçado + Máscara Black", price: "R\$ 45,00"),
             ServiceCard(title: "Corte Disfarçado + Pigmentação Cabelo", price: "R\$ 60,00"),
-            const SizedBox(height: 20),
+            SizedBox(height: 20),
           ],
         ),
       ),
@@ -111,41 +112,6 @@ class ServiceSelectionPage extends StatelessWidget {
               ),
             ),
           ),
-        ),
-      ),
-    );
-  }
-}
-
-class ServiceCard extends StatefulWidget {
-  final String title;
-  final String price;
-
-  ServiceCard({required this.title, required this.price});
-
-  @override
-  _ServiceCardState createState() => _ServiceCardState();
-}
-
-class _ServiceCardState extends State<ServiceCard> {
-  bool isSelected = false;
-
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      margin: const EdgeInsets.symmetric(vertical: 10),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-      child: ListTile(
-        contentPadding: const EdgeInsets.all(16),
-        title: Text(widget.title),
-        subtitle: Text(widget.price),
-        trailing: Checkbox(
-          value: isSelected,
-          onChanged: (bool? value) {
-            setState(() {
-              isSelected = value ?? false;
-            });
-          },
         ),
       ),
     );
