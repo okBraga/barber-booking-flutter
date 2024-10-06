@@ -1,3 +1,4 @@
+import 'package:firebase_login/core/text_style.dart';
 import 'package:flutter/material.dart';
 
 class SummaryPage extends StatelessWidget {
@@ -135,24 +136,14 @@ class SummaryPage extends StatelessWidget {
                           "Serviços Selecionados:",
                           style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                         ),
-                        IconButton(
-                          icon: const Icon(Icons.edit),
-                          onPressed: () {
-                            _showEditOptions(
-                              context,
-                              'Editar Serviços',
-                              ListView(
-                                shrinkWrap: true,
-                                children: selectedServices
-                                    .map((service) => ListTile(
-                                          title: Text(service['name']),
-                                          trailing: const Icon(Icons.check),
-                                          onTap: () {},
-                                        ))
-                                    .toList(),
-                              ),
-                            );
-                          },
+                        TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            'Editar',
+                            style: headlineDot.copyWith(
+                              fontSize: 14.0,
+                            ),
+                          ),
                         ),
                       ],
                     ),

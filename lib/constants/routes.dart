@@ -8,4 +8,5 @@ class Routes {
   static const professionalSelectionPage = '/professional-selection-page';
   static const dateSelectionPage = '/date-selection-page';
   static const summaryPage = '/summary-page';
+  static const planPage = '/plan-page';
 }
