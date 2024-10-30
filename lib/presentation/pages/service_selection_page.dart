@@ -1,5 +1,5 @@
-import 'package:firebase_login/constants/routes.dart';
-import 'package:firebase_login/widget/service_card.dart';
+import 'package:firebase_login/core/constants/routes.dart';
+import 'package:firebase_login/presentation/widgets/service_card.dart';
 import 'package:flutter/material.dart';
 
 class ServiceSelectionPage extends StatelessWidget {

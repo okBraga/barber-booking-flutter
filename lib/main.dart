@@ -1,12 +1,12 @@
-import 'package:firebase_login/constants/routes.dart';
-import 'package:firebase_login/page/date_selection_page.dart';
-import 'package:firebase_login/page/home_page.dart';
-import 'package:firebase_login/page/login_page.dart';
-import 'package:firebase_login/page/plan_selection_page.dart';
-import 'package:firebase_login/page/professional_selection_page.dart';
-import 'package:firebase_login/page/service_selection_page.dart';
-import 'package:firebase_login/page/sign_up_page.dart';
-import 'package:firebase_login/page/summary_page.dart';
+import 'package:firebase_login/core/constants/routes.dart';
+import 'package:firebase_login/presentation/pages/date_selection_page.dart';
+import 'package:firebase_login/presentation/pages/home_page.dart';
+import 'package:firebase_login/presentation/pages/login_page.dart';
+import 'package:firebase_login/presentation/pages/plan_selection_page.dart';
+import 'package:firebase_login/presentation/pages/professional_selection_page.dart';
+import 'package:firebase_login/presentation/pages/service_selection_page.dart';
+import 'package:firebase_login/presentation/pages/sign_up_page.dart';
+import 'package:firebase_login/presentation/pages/summary_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           useMaterial3: true,
         ),
-        initialRoute: Routes.planPage,
+        initialRoute: Routes.loginPage,
         routes: {
           Routes.loginPage: (_) => const LoginPage(),
           Routes.sigUpPage: (_) => const SignUpPage(),
@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
           Routes.professionalSelectionPage: (_) => const ProfessionalSelectionPage(),
           Routes.dateSelectionPage: (_) => const DateTimeSelectionPage(selectedProfessional: 'Profissional 1'),
           Routes.summaryPage: (_) => SummaryPage(),
-          Routes.planPage: (_) => PlanSelectionPage(),
+          Routes.planPage: (_) => const PlanSelectionPage(),
         });
   }
 }

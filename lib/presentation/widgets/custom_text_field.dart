@@ -1,5 +1,5 @@
-import 'package:firebase_login/core/colors.dart';
-import 'package:firebase_login/core/text_style.dart';
+import 'package:firebase_login/core/theme/app_colors.dart';
+import 'package:firebase_login/core/theme/app_text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -38,14 +38,13 @@ class _CustomTextFieldState extends State<CustomTextField> {
         vertical: 10.0,
       ),
       decoration: BoxDecoration(
-        color: blackTextField,
+        color: AppColors.blackTextField,
         borderRadius: BorderRadius.circular(20.0),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          SizedBox(
-            width: 270.0,
+          Expanded(
             child: TextFormField(
               controller: widget.controller,
               textAlignVertical: TextAlignVertical.center,
@@ -54,9 +53,9 @@ class _CustomTextFieldState extends State<CustomTextField> {
               decoration: InputDecoration(
                 border: InputBorder.none,
                 hintText: widget.hintText,
-                hintStyle: hintStyle,
+                hintStyle: AppTextStyles.hintStyle,
               ),
-              style: headline2,
+              style: AppTextStyles.displayMedium,
               validator: widget.validator,
             ),
           ),
@@ -65,7 +64,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
             child: SvgPicture.asset(
               'assets/icon/${widget.image}',
               height: 20.0,
-              color: grayText,
+              color: AppColors.grayText,
             ),
           ),
         ],

@@ -1,4 +1,4 @@
-import 'package:firebase_login/core/text_style.dart';
+import 'package:firebase_login/core/theme/app_text_style.dart';
 import 'package:flutter/material.dart';
 
 class SummaryPage extends StatelessWidget {
@@ -140,7 +140,7 @@ class SummaryPage extends StatelessWidget {
                           onPressed: () {},
                           child: Text(
                             'Editar',
-                            style: headlineDot.copyWith(
+                            style: AppTextStyles.headlineDot.copyWith(
                               fontSize: 14.0,
                             ),
                           ),

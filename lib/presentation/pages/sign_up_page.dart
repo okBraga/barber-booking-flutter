@@ -1,7 +1,7 @@
-import 'package:firebase_login/core/colors.dart';
-import 'package:firebase_login/core/text_style.dart';
-import 'package:firebase_login/widget/custom_text_field.dart';
-import 'package:firebase_login/widget/main_button.dart';
+import 'package:firebase_login/core/theme/app_colors.dart';
+import 'package:firebase_login/core/theme/app_text_style.dart';
+import 'package:firebase_login/presentation/widgets/custom_text_field.dart';
+import 'package:firebase_login/presentation/widgets/main_button.dart';
 import 'package:flutter/material.dart';
 
 class SignUpPage extends StatefulWidget {
@@ -34,12 +34,12 @@ class SignUpPageState extends State<SignUpPage> {
                   const SizedBox(height: 40.0),
                   const Text(
                     'Create new account',
-                    style: headline1,
+                    style: AppTextStyles.displayLarge,
                   ),
                   const SizedBox(height: 10.0),
                   const Text(
                     'Please fill in the form to continue',
-                    style: headline3,
+                    style: AppTextStyles.headline3,
                   ),
                   const SizedBox(height: 60.0),
                   CustomTextField(
@@ -103,7 +103,7 @@ class SignUpPageState extends State<SignUpPage> {
                       _formKey.currentState!.validate();
                     },
                     text: 'Sign Up',
-                    buttonColor: blueButton,
+                    buttonColor: AppColors.blueButton,
                   ),
                   const SizedBox(height: 30.0),
                   Row(
@@ -111,7 +111,7 @@ class SignUpPageState extends State<SignUpPage> {
                     children: [
                       Text(
                         'Have an account? ',
-                        style: headline.copyWith(
+                        style: AppTextStyles.headline.copyWith(
                           fontSize: 14.0,
                         ),
                       ),
@@ -126,7 +126,7 @@ class SignUpPageState extends State<SignUpPage> {
                         },
                         child: Text(
                           'Sign In',
-                          style: headlineDot.copyWith(
+                          style: AppTextStyles.headlineDot.copyWith(
                             fontSize: 14.0,
                           ),
                         ),

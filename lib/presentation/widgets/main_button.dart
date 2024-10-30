@@ -1,4 +1,4 @@
-import 'package:firebase_login/core/text_style.dart';
+import 'package:firebase_login/core/theme/app_text_style.dart';
 import 'package:flutter/material.dart';
 
 class MainButton extends StatelessWidget {
@@ -53,7 +53,7 @@ class MainButton extends StatelessWidget {
                   ),
                 Text(
                   text,
-                  style: textColor != null ? headline2.copyWith(color: textColor) : headline2,
+                  style: textColor != null ? AppTextStyles.displayMedium.copyWith(color: textColor) : AppTextStyles.displayMedium,
                 ),
               ],
             ),

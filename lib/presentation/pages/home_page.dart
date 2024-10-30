@@ -1,4 +1,4 @@
-import 'package:firebase_login/constants/routes.dart';
+import 'package:firebase_login/core/constants/routes.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {

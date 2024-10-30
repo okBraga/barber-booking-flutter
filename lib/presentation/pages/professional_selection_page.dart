@@ -1,5 +1,5 @@
-import 'package:firebase_login/constants/routes.dart';
-import 'package:firebase_login/widget/professional_card.dart';
+import 'package:firebase_login/core/constants/routes.dart';
+import 'package:firebase_login/presentation/widgets/professional_card.dart';
 import 'package:flutter/material.dart';
 
 class ProfessionalSelectionPage extends StatefulWidget {
